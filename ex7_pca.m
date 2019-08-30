@@ -79,6 +79,7 @@ pause;
 fprintf('\nDimension reduction on example dataset.\n\n');
 
 %  Plot the normalized dataset (returned from pca)
+figure;
 plot(X_norm(:, 1), X_norm(:, 2), 'bo');
 axis([-4 3 -4 3]); axis square
 
@@ -113,6 +114,7 @@ fprintf('\nLoading face dataset.\n\n');
 load ('ex7faces.mat')
 
 %  Display the first 100 faces in the dataset
+figure;
 displayData(X(1:100, :));
 
 fprintf('Program paused. Press enter to continue.\n');
@@ -133,6 +135,7 @@ fprintf(['\nRunning PCA on face dataset.\n' ...
 [U, S] = pca(X_norm);
 
 %  Visualize the top 36 eigenvectors found
+figure;
 displayData(U(:, 1:36)');
 
 fprintf('Program paused. Press enter to continue.\n');
@@ -164,6 +167,7 @@ K = 100;
 X_rec  = recoverData(Z, U, K);
 
 % Display normalized data
+figure;
 subplot(1, 2, 1);
 displayData(X_norm(1:100,:));
 title('Original faces');
@@ -185,7 +189,7 @@ pause;
 %  pixel colors of an image. We first visualize this output in 3D, and then
 %  apply PCA to obtain a visualization in 2D.
 
-close all; close all; clc
+%close all; close all; clc
 
 % Reload the image from the previous exercise and run K-Means on it
 % For this to work, you need to complete the K-Means assignment first
