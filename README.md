@@ -8,3 +8,4 @@ a) Assignment step- Each data point is assigned to a cluster whose center is nea
 b) Update step- New cluster centers (centroids) are calculated from the data points assigned to the new cluster by choosing the average value of these data points.
 
 Thus K-means clustering will group similar colors together into ‘k’ clusters.Therefore, each cluster centroid is the representative of the three dimensional color vector in RGB color space of its respective cluster.
+Refer the pdf file for more details.
